@@ -2,6 +2,7 @@ import RestaurantImage from "./restaurant.jpg";
 
 export function setHomepageContent() {
     const mainContent = document.querySelector("main");
+    mainContent.innerHTML = "";
 
     const h1 = document.createElement("h1");
     h1.textContent = "A restaurant title";
