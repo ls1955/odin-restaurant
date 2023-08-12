@@ -1,3 +1,3 @@
-import { initWebpage } from "./init.js";
+import { setHomepageContent } from "./homepage.js";
 
-initWebpage();
+setHomepageContent();
