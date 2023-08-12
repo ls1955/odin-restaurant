@@ -1,4 +1,5 @@
 import { setHomepageContent } from "./homepage.js";
+import { setMenuContent } from "./menu.js";
 
 function setNav() {
     const nav = document.createElement("nav");
