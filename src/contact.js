@@ -1,9 +1,12 @@
 export function setContactContent() {
+    let previousContent = document.querySelector("main");
+
+    if (previousContent != null) document.body.removeChild(previousContent);
+
+    const mainContent = document.createElement("main");
+
     const h1 = document.createElement("h1");
     h1.textContent = "Contacts";
-
-    const mainContent = document.querySelector("main");
-    mainContent.innerHTML = "";
 
     const contactsList = document.createElement("ul");
 
@@ -16,5 +19,6 @@ export function setContactContent() {
     contactsList.appendChild(ownerContact);
     contactsList.appendChild(managerContact);
     mainContent.appendChild(h1);
-    mainContent.appendChild(contactsList)
+    mainContent.appendChild(contactsList);
+    document.body.appendChild(mainContent);
 }

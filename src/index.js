@@ -20,8 +20,7 @@ function setNav() {
     nav.appendChild(menuBtn);
     nav.appendChild(contactBtn);
 
-    const mainContent = document.querySelector("main");
-    document.body.insertBefore(nav, mainContent);
+    document.body.appendChild(nav);
 }
 
 setNav();

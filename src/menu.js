@@ -1,6 +1,9 @@
 export function setMenuContent() {
-    const mainContent = document.querySelector("main");
-    mainContent.innerHTML = "";
+    let previousContent = document.querySelector("main");
+
+    if (previousContent != null) document.body.removeChild(previousContent);
+
+    const mainContent = document.createElement("main");
 
     const drinksList = document.createElement("ul");
     drinksList.textContent = "Drinks";
@@ -35,4 +38,6 @@ export function setMenuContent() {
     foodsList.appendChild(burger);
     foodsList.appendChild(pizza);
     mainContent.appendChild(foodsList);
+
+    document.body.appendChild(mainContent);
 }

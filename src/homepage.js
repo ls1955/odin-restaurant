@@ -1,8 +1,11 @@
 import RestaurantImage from "./restaurant.jpg";
 
 export function setHomepageContent() {
-    const mainContent = document.querySelector("main");
-    mainContent.innerHTML = "";
+    let previousContent = document.querySelector("main");
+
+    if (previousContent != null) document.body.removeChild(previousContent);
+
+    const mainContent = document.createElement("main");
 
     const h1 = document.createElement("h1");
     h1.textContent = "A restaurant title";
@@ -17,4 +20,5 @@ export function setHomepageContent() {
     mainContent.appendChild(h1);
     mainContent.appendChild(image);
     mainContent.appendChild(paragraph);
+    document.body.appendChild(mainContent);
 }
