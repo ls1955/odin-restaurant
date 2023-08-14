@@ -5,8 +5,9 @@ export function setMenuContent() {
 
     const mainContent = document.createElement("main");
 
+    const drinksHeader = document.createElement("h1");
+    drinksHeader.textContent = "Drinks";
     const drinksList = document.createElement("ul");
-    drinksList.textContent = "Drinks";
 
     const budweiser = document.createElement("li");
     budweiser.textContent = "Budweiser";
@@ -20,10 +21,12 @@ export function setMenuContent() {
     drinksList.appendChild(budweiser);
     drinksList.appendChild(asahiBreweries);
     drinksList.appendChild(guinness);
+    mainContent.appendChild(drinksHeader);
     mainContent.appendChild(drinksList);
 
+    const foodsHeader = document.createElement("h1");
+    foodsHeader.textContent = "Foods";
     const foodsList = document.createElement("ul");
-    foodsList.textContent = "Foods";
 
     const bbq = document.createElement("li");
     bbq.textContent = "barbeque";
@@ -37,6 +40,7 @@ export function setMenuContent() {
     foodsList.appendChild(bbq);
     foodsList.appendChild(burger);
     foodsList.appendChild(pizza);
+    mainContent.appendChild(foodsHeader);
     mainContent.appendChild(foodsList);
 
     document.body.appendChild(mainContent);
